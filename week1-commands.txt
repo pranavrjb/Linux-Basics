@@ -1,0 +1,53 @@
+# Week 1 – Linux Commands Practice
+
+# Navigating the File System
+pwd
+ls
+ls -la
+cd /home
+cd ..
+cd ~
+
+# Creating Files and Directories
+mkdir devops-practice
+cd devops-practice
+touch notes.txt
+mkdir scripts
+
+# Viewing File Content
+cat notes.txt
+more notes.txt
+less notes.txt
+/head
+head -n 5 notes.txt
+tail -n 10 notes.txt
+
+# Editing Files
+vim notes.txt
+
+# Searching
+find / -name "notes.txt"
+locate passwd
+grep "root" /etc/passwd
+grep -i "user" notes.txt
+
+# Paths
+cd /usr/bin         # Absolute path
+cd ../../Documents  # Relative path
+
+# Disk & System Info
+df -h
+history
+
+# Text Processing
+cut -d: -f1 /etc/passwd
+awk -F: '{ print $1 }' /etc/passwd
+sed 's/user/admin/' notes.txt
+
+# Networking
+ip addr show
+sudo systemctl status ssh
+sudo systemctl start ssh
+
+# Exit the terminal
+exit
